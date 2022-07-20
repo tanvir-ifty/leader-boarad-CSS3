@@ -106,10 +106,24 @@ hr {
     grid-column-gap: 24px;
 }
 
+.course {
+    width: 253px;
+    height: 270px;
+    box-shadow: 1px 1px 8px rgb(245, 244, 244);
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .course-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.course-duration {
+    background-color: #ffe4e8;
+    border-radius: 15px;
+    padding: 7px;
 }
 
 .fa-star {
@@ -122,4 +136,43 @@ hr {
 
 .fa-star.empty {
     color: #aeaeae;
+}
+
+/* media query */
+/* mobile devises */
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog,
+    .course {
+        flex-direction: column;
+    }
+}
+
+/* for tablet devices */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs,
+    /* .courses {
+        grid-template-columns: repeat(1, 1fr);
+    } */
+
+
 }
